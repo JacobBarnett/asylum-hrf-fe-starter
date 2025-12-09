@@ -37,13 +37,11 @@ export const LandingPage = () => {
  return (
   <div className="flex flex-col mt-20 w-full">
     <div className="flex flex-row justify-between items-start w-full max-w-[1400px] mx-auto px-4">
-      {/* Box 1 - Left */}
       <div className="flex flex-col items-center py-6 w-1/3">
         <img src={barGraph} className="h-80" />
         <h2 className="text-2xl mt-6">Search Grant Rates By Office</h2>
       </div>
 
-      {/* Box 2 - Center */}
       <div className="flex flex-col items-center py-10 w-1/3">
         <img src={pieChart} className="h-80" />
         <h2 className="text-2xl mt-6">Search Grant Rates By Nationality</h2>
@@ -75,10 +73,6 @@ export const LandingPage = () => {
 </div>
 
 
-
-
-
-
 <div className="flex flex-col lg:flex-row justify-center items-center mt-16 w-full px-10 gap-32 max-w-[1400px] mx-auto">
   <img
     src={paperStack}
@@ -99,7 +93,6 @@ export const LandingPage = () => {
     </h2>
 
 <div className="flex flex-row justify-between items-start w-full px-12 mt-16">
-  {/* Box 1 */}
   <div className="flex flex-col w-96 text-center">
     <h2 className="text-4xl mb-4">36%</h2>
     <h2 className="text-lg leading-relaxed">
@@ -107,7 +100,6 @@ export const LandingPage = () => {
     </h2>
   </div>
 
-  {/* Box 2 */}
   <div className="flex flex-col w-96 text-center">
     <h2 className="text-4xl mb-4">5%</h2>
     <h2 className="text-lg leading-relaxed">
@@ -115,7 +107,6 @@ export const LandingPage = () => {
     </h2>
   </div>
 
-  {/* Box 3 */}
   <div className="flex flex-col w-96 text-center">
     <h2 className="text-4xl mb-4">6x Lower</h2>
     <h2 className="text-lg leading-relaxed">
@@ -131,8 +122,7 @@ export const LandingPage = () => {
     rel="noopener noreferrer"
   >
     <button className="bg-[#6B705C] text-white px-4 py-2 text-base 
-                       rounded-none border border-[#6B705C] 
-                       hover:bg-[#5A5F4C] transition">
+       rounded-none border border-[#6B705C] hover:bg-[#5A5F4C] transition">
       Read More
     </button>
   </a>
@@ -141,14 +131,6 @@ export const LandingPage = () => {
     Back To Top ^
   </div>
 </div>
-
-
-
-
-
-
-
-
   </div>
     
     // <div className='flex-c w-[100vw] secondary-c'>

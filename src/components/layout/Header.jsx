@@ -11,35 +11,34 @@ export default function Header() {
   const isAuthenticated = false;
 
   return (
-    <header className = "primary-c flex flex-col gap-7 pb-7">
-    <div className='flex w-[100%] justify-between px-14'>
-      <div className='flex justify-between'>
-        <NavLink to='https://www.humanrightsfirst.org/'>
-          <img className='w-[100px]' src={Logo} alt='HRF logo white' />
-        </NavLink>
-      </div>
-      <div className='flex items-center py-4 gap-16'>
-        <NavLink to='/' className='nav-btn'>
-          Home
-        </NavLink>
-        <NavLink to='/graphs' className='nav-btn'>
-          Graphs
-        </NavLink>
-        {isAuthenticated && (
-          <NavLink to='/profile' className='nav-btn'>
-            Profile
+    <header className='primary-c flex flex-col gap-7 pb-7'>
+      <div className='flex w-[100%] justify-between px-14'>
+        <div className='flex justify-between'>
+          <NavLink to='https://www.humanrightsfirst.org/'>
+            <img className='w-[100px]' src={Logo} alt='HRF logo white' />
           </NavLink>
-        )}
-        <LoggingButtons />
+        </div>
+        <div className='flex items-center py-4 gap-16'>
+          <NavLink to='/' className='nav-btn'>
+            Home
+          </NavLink>
+          <NavLink to='/graphs' className='nav-btn'>
+            Graphs
+          </NavLink>
+          {isAuthenticated && (
+            <NavLink to='/profile' className='nav-btn'>
+              Profile
+            </NavLink>
+          )}
+          <LoggingButtons />
+        </div>
       </div>
-     </div>
-      <h1 class="text-6xl font-serif text-white">
-    Asylum Office Grant Rate Tracker
-    </h1>
+      <h1 class='text-6xl font-serif text-white'>Asylum Office Grant Rate Tracker</h1>
 
-    <h3 class= "text-white font-serif">
-    The Asylum Office Grant Rate Tracker provides asylum seekers, researchers, policymakers, and the public an interactive tool to explore USCIS data on Asylum Office decisions
-    </h3>
+      <h3 class='text-white font-serif'>
+        The Asylum Office Grant Rate Tracker provides asylum seekers, researchers, policymakers, and the public an interactive tool to explore USCIS data on
+        Asylum Office decisions
+      </h3>
     </header>
   );
 }
