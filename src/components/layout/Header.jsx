@@ -11,7 +11,8 @@ export default function Header() {
   const isAuthenticated = false;
 
   return (
-    <header className='flex w-[100%] primary-c justify-between px-14'>
+    <header className = "primary-c flex flex-col gap-7 pb-7">
+    <div className='flex w-[100%] justify-between px-14'>
       <div className='flex justify-between'>
         <NavLink to='https://www.humanrightsfirst.org/'>
           <img className='w-[100px]' src={Logo} alt='HRF logo white' />
@@ -31,6 +32,14 @@ export default function Header() {
         )}
         <LoggingButtons />
       </div>
+     </div>
+      <h1 class="text-6xl font-serif text-white">
+    Asylum Office Grant Rate Tracker
+    </h1>
+
+    <h3 class= "text-white font-serif">
+    The Asylum Office Grant Rate Tracker provides asylum seekers, researchers, policymakers, and the public an interactive tool to explore USCIS data on Asylum Office decisions
+    </h3>
     </header>
   );
 }
