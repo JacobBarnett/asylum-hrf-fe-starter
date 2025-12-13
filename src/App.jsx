@@ -1,11 +1,26 @@
 import './App.css';
+import * as React from 'react';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import { LandingPage } from './components/pages/Landing';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { GraphsPage } from './components/pages/DataVisualizations/GraphsPage.jsx';
 import { NotFoundPage } from './components/pages/NotFound/index.jsx';
-import * as React from 'react';
 import Profile from './components/pages/Profile/index.jsx';
 import { pageWrapper } from './components/layout/PageWrapper.jsx';
+import { useAuth0 } from '@auth0/auth0-react';
+
+const ProtectedRoute = ({ children }) => {
+  const { isAuthenticated, isLoading } = useAuth0();
+
+  if (isLoading) {
+    return <div className='text-center p-4'>Loading...</div>;
+  }
+
+  if (!isAuthenticated) {
+    return <Navigate to='/' replace />;
+  }
+
+  return children;
+};
 
 const router = createBrowserRouter([
   {
@@ -20,7 +35,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/profile',
-    element: pageWrapper(<Profile />),
+    element: <ProtectedRoute>{pageWrapper(<Profile />)}</ProtectedRoute>,
     errorElement: <NotFoundPage />,
   },
 ]);
